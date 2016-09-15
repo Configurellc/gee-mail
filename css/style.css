@@ -3,30 +3,91 @@ body {
 	text-decoration-style: ;
 }
 
+#menu {
+	display: inline-block;
+	border-bottom: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: white;
+}
+
+.topNav {
+	float: left;
+	font-size: 20px;
+	/*padding: 20px;*/
+	height: 25px;
+	width: 75px;
+	padding-right:  100px;
+	background-color: white;
+	border-top: solid;
+	border-top-color: black;
+	border-right-width: 6px;
+	border-right-color: #d7d7d7;
+	border-right: solid;
+	border-color: #d7d7d7;
+	transition-duration: 0.4s;
+}
+
+.topNav:hover {
+	background-color: white;
+}
+.social {
+	float: right;
+	font-size: 20px;
+	height: 28px;
+	width: 75px;
+	/*padding: 20px;*/
+	padding-right:  80px;
+	background-color: #d7d7d7;
+	border-color: #d7d7d7;
+	transition-duration: 0.4s;
+}
+
+.social:hover {
+	background-color: white;
+}
 .container {
-	background-color: orange;
+	background-color: white;
+	float: right;
 
 }
 
+#main {
+	background: white;
+	float: right;
+	height: 500px;
+	width: 84%;
+	padding-left: 0px;
+	overflow: scroll;
+	overflow-x:  hidden;
+}
 
 .myDate {
-	background-color: yellow;
+	background-color: white;
 	float:right;
 	margin-top: 5px;
 	padding left: 50%;
 	text-align: right;
 	border-bottom: solid;
-	border-top: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #d7d7d7;
+	/*border-top: solid;*/
 	border-width: 100%;
-	
+	/*cursor: pointer; cursor: hand; */
+	 
 }
 
 .mySender {
-	background-color: pink;
+	background-color: white;
 	/*border-top: solid;*/
 	border-bottom: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #d7d7d7;
 	border-width: 100%;
 	width: 33%;
+	color: blue;
+	font-weight: bold;
+	cursor: pointer; cursor: hand;
+	transition-duration: 0.4s;
 }
 
 .mySubject {
@@ -36,14 +97,96 @@ body {
 	width: 30%;
 	padding-left: 20%;
 	text-align: left;
-	border-top: solid;
+	/*border-top: solid;*/
 	border-bottom: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: #d7d7d7;
 	border-width: 100%;
-	
+	transition-duration: 0.2s;
+	/*cursor: pointer; cursor: hand;*/
 }
 
 .myBody {
 	background-color: yellow;
 	display: none;
+	text-indent: 50px;
 	
 }
+#side {
+	height: 100%;
+	width: 15%;
+	float: left;
+	padding-right: 0px;
+	margin-right: 0px;
+	background-color: white;
+	border-bottom: solid; 
+	border-right: solid;
+	padding-right: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+.compose {
+	font-family: arial, sans-serif;
+	color: white;
+	font-weight: bold;
+	text-align: right;
+	font-size: 11px;
+	border-radius: 8px;
+	padding: 5px 20px;
+	background-color: #d14836;
+	transition-duration: 0.4s;
+}
+
+}
+
+.sideDiv {
+	float: left;
+	background-color: yellow;
+	height: 100%;
+	width: 9%;
+	padding-right: 0px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 33px;
+
+
+}
+
+
+
+.mySender:hover { 
+	background-color: grey;
+}
+
+.mySubject:hover { 
+	background-color: grey;
+}
+
+.myBody:hover { 
+	background-color: white;
+}
+
+.myDate:hover { 
+	background-color: grey;
+}
+
+.sideInbox:hover {
+	background-color: #d7d7d7;
+	cursor: pointer; cursor: hand;
+}
+
+.sideSent:hover {
+	background-color: #d7d7d7;
+	cursor: pointer; cursor: hand;
+}
+
+.sideDraft:hover {
+	background-color: #d7d7d7;
+	cursor: pointer; cursor: hand;
+}
+
+.sideStarred:hover {
+	background-color: #d7d7d7;
+	cursor: pointer; cursor: hand;
+}
+
