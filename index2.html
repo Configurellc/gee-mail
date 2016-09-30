@@ -1,0 +1,284 @@
+<html>
+    <head>
+        <script src="js/mail-generator.js"></script>
+        <link href="css/style.css" rel="stylesheet" media="screen">
+    <script>
+      window.onload = function(){
+        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+        // console.log(window.geemails);
+
+        function buildMe(mail) {
+            for(var i = 0; i<mail.length; i++) {
+                 //console.log(mail[i]);
+                var main = document.getElementById("main");
+                var myMail = document.createElement('div');
+                    myMail.className = "myMail";
+                main.appendChild(myMail);
+
+                var myDate = document.createElement('div');
+                    myDate.className = "myDate";
+                var mySender = document.createElement('div');
+                    mySender.className = "mySender";
+                var mySubject = document.createElement('div');
+                    mySubject.className = "mySubject";
+                var myBody = document.createElement('div');
+                    myBody.className = "myBody";
+
+                // var showBody =document.createElement('div');
+                //     showBody.className = "showBody";
+                //     myMail.appendChild(showBody);
+
+
+              //this is inserting the data containers into the "myMail" div which is appended to the main div located inside the body 
+                myDate.innerHTML = mail[i].date;
+                mySender.innerHTML = mail[i].sender;
+                mySubject.innerHTML = mail[i].subject;
+                myBody.innerHTML = mail[i].body;
+
+                //this is appending the the sender, subject, and body div's to the myMail div
+                myMail.appendChild(myDate);
+                myMail.appendChild(mySender);
+                myMail.appendChild(mySubject);
+                myMail.appendChild(myBody);
+
+        }    
+
+         setInterval(function() { 
+
+            var emailMe = document.getElementsByClassName('myEmail');
+            for (var i = 0; i<emailMe.length; i++){
+                emailMe[i].addEventListener('click', toggleBody);
+            }
+                var count = document.getElementById('main');
+            for (var i = 0; i<geemails.length; i++){
+                // emailMe[i].addEventListener('click', toggleBody);
+                // var inboxCount = myEmail.children.length;
+                    geemails.innerHTML =  count;
+            }
+               function toggleBody(id) { 
+                var showBody = this.querySelectorAll('.myBody')[0];
+                 
+                 if(showBody.style.display === 'none') {
+                     showBody.style.display = 'block';
+                 }else{
+                     showBody.style.display = 'none';
+                 }
+             }
+                var main = document.getElementById('main'); 
+                var myMail = document.createElement('div');
+                    myEmailData = getNewMessage();
+                    myMail.className = "myEmail";
+                    main.appendChild(myMail);
+                    
+                
+                var myDate = document.createElement('div');
+                    myDate.className = "myDate";
+                var mySender = document.createElement('div');
+                    mySender.className = "mySender";
+                var mySubject = document.createElement('div');
+                    mySubject.className = "mySubject";
+                var myBody = document.createElement('div');
+                    myBody.className = "myBody";
+
+                
+
+                    mySender.innerHTML = myEmailData.sender;
+                        // mySender.className = "mySender";
+                    myDate.innerHTML = myEmailData.date;
+                        // myDate.className = "myDate";
+                    mySubject.innerHTML = myEmailData.subject;
+                        // mySubject.className = "mySubject";
+                    myBody.innerHTML = myEmailData.body;
+                        // myBody.className = "myBody";
+
+
+                    myMail.appendChild(myDate);
+                    myMail.appendChild(mySender);
+                    myMail.appendChild(mySubject);
+                    myMail.appendChild(myBody);
+                     //  generateMessage(mail);
+
+
+                        }, 10000);
+
+        //buildMe();
+            
+            var emailMe = document.getElementsByClassName('myMail');
+            for (var i = 0; i<emailMe.length; i++){
+                emailMe[i].addEventListener('click', toggleBody);
+            }
+               function toggleBody(id) { 
+                var showBody = this.querySelectorAll('.myBody')[0];
+                 
+                 if(showBody.style.display === 'none') {
+                     showBody.style.display = 'block';
+                 }else{
+                     showBody.style.display = 'none';
+                 }
+             }
+
+              
+
+         }  
+
+         
+
+            // var newEmail = 
+              
+            // function timer() {
+            //     for (var i = 0; i < 1 ; i++){
+            //   var callBack = document.querySelector('.myMail');
+            //   // var newMail =  document.body.appendChild(document.createElement('div'));
+
+            //   var main = document.getElementById('main');
+            //  
+            //     newMail.className= "newMail";
+            //   message.subject = getRandomElement(subject);
+            //     newMail.innerHTML = message.subject;
+            //     main.appendChild(newMail);
+           
+             // return loadGeeMails(geemails);
+
+
+
+                // for (var i = 0; i < myMail.length; i++) {
+                //     var generateEmail = buildMe(geemails);
+                //     window.geemails.push(generateMessage);
+                    // alert("it ran");
+                // } }
+             //}
+        
+
+            
+
+            //  document.getElementById('main').addEventListener('click', toggle);
+
+
+            // function toggle(){
+            //     var toggle = document.getElementById('main');
+            //          showBody.innerHTML = main;
+            //          main.appendChild(showBody);
+
+            // }
+            // toggle();
+           
+          
+            // console.log(toggleBody(myBody));
+
+      //}
+
+        buildMe(geemails);
+/**************************************************************************************
+                                    GET INBOX COUNT
+**************************************************************************************/
+
+//     function getCount(parent, getChildrensChildren){
+//     var relevantChildren = 0;
+//     var children = parent.childNodes.length;
+//     for(var i=0; i < children; i++){
+//         if(parent.childNodes[i].nodeType != 3){
+//             if(getChildrensChildren)
+//                 relevantChildren += getCount(parent.childNodes[i],true);
+//             relevantChildren++;
+//             }
+//     }
+//     return relevantChildren;
+// }
+
+// var element = document.getElementById("myMail");
+// alert(getCount(element, true)); // Get all child node count
+var inboxCount = main.children.length;
+var getInbox = document.getElementById('main');
+setInterval(function() {
+    inboxCount++;
+     sideInbox.innerHTML = "Inbox(" + inboxCount+ ")";
+// var newInboxCount = "";
+// for(var i=0; i < inboxCount.length; i++) {
+//     inboxCount = main.children.length;
+
+//     // var newInboxCount = main.children.length;
+//     //     if (newInboxCount< inboxCount[i]) {
+//     //         inboxCount++;
+//     //     }
+//         return inboxCount[i];
+//    }
+  }, 10000);
+    // console.log(getInbox[i]);
+//     newInboxCount = newInboxCount + inboxCount.length[i];
+//    return newInboxCount;
+//     // return inboxCount;
+
+// }
+//  console.log(newInboxCount)
+// console.log(inboxCount);
+
+/*************************************************************************************
+Buttons for internal navigation and also side div
+**************************************************************************************/
+
+var topNav = document.createElement('td');
+    topNav.className = "topNav";
+    topNav.innerHTML = "Primary";
+var social = document.createElement('td');
+    social.className = "social";
+    social.innerHTML = "Social";
+
+var sideDiv = document.createElement('div');
+    sideDiv.className = "sideDiv";
+    // sideDiv.innerHTML = "Inbox Starred Important Sent Drafts ";
+
+var compose = document.createElement('BUTTON');
+    compose.className = "compose";
+    compose.innerHTML = "COMPOSE";    
+
+var sideText = document.createElement('div');
+    sideText.className = "sideText";
+var sideInbox = document.createElement('div');
+    sideInbox.className = "sideInbox";
+    sideInbox.innerHTML = "Inbox(" + inboxCount +")";
+var sideStarred = document.createElement('div');
+    sideStarred.className = "sideStarred";
+    sideStarred.innerHTML = "Starred";
+var sideSent = document.createElement('div');
+    sideSent.className = "sideSent";
+    sideSent.innerHTML = "Sent";
+var sideDraft = document.createElement('div');
+    sideDraft.className = "sideDraft";
+    sideDraft.innerHTML = "Drafts"; 
+
+ var input = document.createElement('INPUT');
+        input.type = ('radio');
+        input.setAttribute += "friends";
+    input.className = ("input");
+    input.innerHTML = "friends";
+
+side.appendChild(compose);
+side.appendChild(sideText);    
+sideText.appendChild(sideInbox);       
+sideText.appendChild(sideStarred);    
+sideText.appendChild(sideSent);    
+sideText.appendChild(sideDraft);   
+side.appendChild(sideDiv);
+menu.appendChild(topNav);
+menu.appendChild(social);
+side.appendChild(input);
+
+
+
+    
+
+        // console.log(buildMe());
+      };
+    </script>
+    </head>
+    <body>
+        <table id="menu"></table>
+        <div id="side"></div>
+        <div class="container" id="main">
+            
+        </div>
+    
+
+    </body>
+</html>

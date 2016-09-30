@@ -103,11 +103,12 @@ body {
 	border-bottom-color: #d7d7d7;
 	border-width: 100%;
 	transition-duration: 0.2s;
+	cursor: pointer; cursor: hand;
 	/*cursor: pointer; cursor: hand;*/
 }
 
 .myBody {
-	background-color: yellow;
+	background-color:  #ffe680;
 	display: none;
 	text-indent: 50px;
 	
@@ -159,12 +160,12 @@ body {
 }
 
 .mySubject:hover { 
-	background-color: grey;
+	background-color: #d7d7d7;;
 }
 
-.myBody:hover { 
+/*.myBody:hover { 
 	background-color: white;
-}
+}*/
 
 .myDate:hover { 
 	background-color: grey;
